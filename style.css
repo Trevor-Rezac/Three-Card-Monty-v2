@@ -16,9 +16,69 @@ body {
   align-items: center;
   width: 90%;
   margin: 0;
+  transition: all 3s ease-in-out;
 }
 
 .card img {
   height: 15rem;
   width: 11.5rem;
+  border: solid 1px black;
+  border-radius: 5px;
+}
+
+.disablePointer {
+  pointer-events: none;
+}
+
+@keyframes shuffleCard1 {
+  0% {
+    transform: translateX(15rem)
+  }
+100% {
+    transform: translateX(0rem);
+  }
+
+}
+
+@keyframes shuffleCard2 {
+  0% {
+    transform: translateX(-10rem)
+  }
+  50% {
+    transform: translateX(10rem);
+  }
+100% {
+  transform: translateX(0rem);
+}
+}
+
+@keyframes shuffleCard3 {
+  0% {
+    transform: translateX(-15rem)
+  }
+100% {
+    transform: translateX(0rem);
+  }
+
+}
+
+@media only screen and (min-width: 360px) and (max-width: 768px) {
+	.card img {
+    height: 10rem;
+    width: 7.5rem;
+  }
+}
+
+@media only screen and (min-width: 768.1px) and (max-width: 991.9px) {
+	.card img {
+    height: 15rem;
+    width: 11.5rem;
+  }
+}
+
+@media only screen and (min-width: 992px){
+	.card img {
+    height: 20rem;
+    width: 15.5rem;
+  }
 }
