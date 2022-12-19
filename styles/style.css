@@ -59,6 +59,33 @@ main {
   border: solid 1px black;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.reset-stats-btn {
+  cursor: pointer;
+  color: black;
+  font-size: 16px; 
+  line-height: 16px; 
+  padding: 6px; 
+  border-radius: 10px; 
+  font-family: 'Metamorphous', cursive;
+  font-weight: normal; 
+  text-decoration: none; 
+  font-style: normal; 
+  font-variant: normal; 
+  text-transform: none; 
+  background-image: linear-gradient(to right, var(--xanadu-2) 0%, var(--xanadu-3) 100%); 
+  box-shadow: var(--xanadu-3) 1px 1px 5px 1px; 
+  border: 2px solid var(--xanadu-3); 
+  display: inline-block;
+  --webkit-appearance: none;
+}
+.reset-stats-btn:hover {
+  background: var(--xanadu-3); 
+}
+.reset-stats-btn:active {
+  background: var(--xanadu-2); 
 }
 
 .disablePointer {
