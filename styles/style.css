@@ -30,11 +30,11 @@ header {
   flex-direction: column;
   align-items: center;
   font-family: 'Yeseva One', cursive;
-
 }
 header p {
   font-family: 'Metamorphous', cursive;
 }
+
 main {
   display: flex;
   flex-direction: column;
@@ -60,6 +60,14 @@ main {
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   cursor: pointer;
+}
+
+.wins {
+  color: lightgreen;
+}
+
+.losses {
+  color: darkred;
 }
 
 .reset-stats-btn {
