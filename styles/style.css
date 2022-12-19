@@ -2,6 +2,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  --falu-red: #7D1F1Dff;
+  --up-maroon: #781B17ff;
+  --persian-plum: #6F1914ff;
+  --xanadu: #7A907Aff;
+  --xanadu-2: #707F6Cff;
+  --xanadu-3: #64755Cff;
+  --harvest-gold: #CC9528ff;
+  --gold-metallic: #D6AF54ff;
+  --khaki-web: #BDAD91ff;
+  --coffee: #6B4E30ff;
 }
 
 body {
@@ -10,19 +20,27 @@ body {
   align-items: center;
   height: 100vh;
   width: 100%;
+  background: rgb(122,144,122);
+  background: linear-gradient(180deg, rgba(122,144,122,1) 29%, rgba(112,127,108,1) 59%, rgba(100,117,92,1) 84%);
 }
 
 header {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+  font-family: 'Yeseva One', cursive;
 
+}
+header p {
+  font-family: 'Metamorphous', cursive;
+}
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  font-family: 'Metamorphous', cursive;
 }
 
 .card-container {
