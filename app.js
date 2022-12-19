@@ -1,5 +1,6 @@
 const cardContainer = document.querySelector(".card-container");
 const cards = document.querySelectorAll(".card");
+const resetBtn = document.querySelector(".reset-stats-btn");
 
 const faceDownCards = ["left", "middle", "right"];
 const aces = ["AoS", "AoD", "AoC", "AoH"];
@@ -21,6 +22,10 @@ cards.forEach((card) => {
     const correctCard = getRandomItem(faceDownCards);
     handleGuess(card, correctCard);
   });
+});
+
+resetBtn.addEventListener("click", () => {
+  resetStats();
 });
 
 function getRandomItem(arr) {
@@ -64,17 +69,25 @@ function shuffleCards() {
   enablePointer();
 }
 
+function resetCards() {
+  cards.forEach((card) => {
+    card.getElementsByTagName("img")[0].src = "./assets/requiemBack.jpeg";
+    card.style.animation = "";
+  });
+}
+
 function updatesWinsLosses() {
   winsEl.textContent = wins;
   attemptsEl.textContent = attempts;
   lossesEl.textContent = attempts - wins;
 }
 
-function resetCards() {
-  cards.forEach((card) => {
-    card.getElementsByTagName("img")[0].src = "./assets/requiemBack.jpeg";
-    card.style.animation = "";
-  });
+function resetStats() {
+  localStorage.setItem("attempts", 0);
+  localStorage.setItem("wins", 0);
+  wins = 0;
+  attempts = 0;
+  updatesWinsLosses();
 }
 
 function disablePointer() {
